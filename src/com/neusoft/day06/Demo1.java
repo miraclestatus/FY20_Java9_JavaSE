@@ -9,6 +9,7 @@ public class Demo1 {
         // 求给定两个数的最大值的方法
        int  res = max(5, 3);
         System.out.println(res);
+        System.out.println(getSum(100));
     }
 
     public static int max(int num1, int num2){
@@ -17,6 +18,15 @@ public class Demo1 {
         else
             return num2;
 
+    }
+    // 求 1 ~ num的累加和
+    public static int getSum(int num){
+        int sum = 0;
+        for (int i = 1; i <= num ; i++) {
+            sum += i;
+            // return i;
+        }
+        return sum;
     }
 
 }

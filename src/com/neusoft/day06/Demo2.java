@@ -24,6 +24,8 @@ public class Demo2 {
         int[] newArr = arrayReverse(arrDemo);
 //        System.out.println(Arrays.toString(arrDemo));
         // 编写一个方法 printArray 打印数组的显示 [6, 5, 4, 100, 2, 22]
+//        System.out.println(newArr);
+        System.out.println(printArray(arrDemo));
     }
         //  arrayMax()
         public static int  arrayMax(int[] arr){
@@ -46,5 +48,21 @@ public class Demo2 {
             }
             return arr;
         }
+        public static String printArray(int[] arr){
+            String str = "[";
+            for (int i = 0; i < arr.length; i++) {
+                if (i == arr.length-1){
+                    // 数组的最后一个
+                    // arr[i] + "] " + " "
+                    str += arr[i] + "]";
+                }else {
+                    // arr[i] + ", " + " "
+                    str += arr[i] + ", " + " ";
+                }
+            }
+            return str;
+        }
+
+
 
 }

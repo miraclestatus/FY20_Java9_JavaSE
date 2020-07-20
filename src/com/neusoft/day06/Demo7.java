@@ -8,13 +8,17 @@ import java.util.Random;
  */
 public class Demo7 {
     public static void main(String[] args) {
-        Random r = new Random();
-        for (int i = 0; i <100 ; i++) {
-            // 0 ~ bound 之间的随机整数 ，左闭右开
-            int num = r.nextInt(5);
-            System.out.print(num);
-
-        }
-//        get Num(num)
+//        Random r = new Random();
+//        for (int i = 0; i <100 ; i++) {
+//            // 0 ~ bound 之间的随机整数 ，左闭右开
+//            int num = r.nextInt(5);
+//            System.out.print(num);
+//
+//        }
+        int num = getNum(100);
+        System.out.println(num);
+    }
+    public static int getNum(int num){
+        return new Random().nextInt(num) + 1;
     }
 }

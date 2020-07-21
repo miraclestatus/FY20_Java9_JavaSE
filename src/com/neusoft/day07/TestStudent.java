@@ -12,7 +12,7 @@ public class TestStudent {
         // 类名 对象名 = new 类名();
         Student student = new Student("李莹", 18);
         Student s2 = new Student();
-        
+
 
         // com.neusoft.day07.Student@1b6d3586
         // 对象如果没有处理，打印出来的格式

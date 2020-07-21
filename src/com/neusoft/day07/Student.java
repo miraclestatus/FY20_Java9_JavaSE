@@ -7,8 +7,14 @@ package com.neusoft.day07;
 public class Student {
     // 建立了一个 Student类
     // 成员变量  ---》 事物的属性
-    String name;
-    int age;
+    private String name;
+    private  int age;
+    public String getName(){
+        return name;
+    }
+    public void setName(String name1){
+        name = name1;
+    }
     // 成员方法  ---》 事物的行为
     public void study(){
         System.out.println("good good study, day day up");

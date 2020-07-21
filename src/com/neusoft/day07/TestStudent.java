@@ -13,16 +13,19 @@ public class TestStudent {
         // 包名 .类名 @ 内存地址
         System.out.println(student);
         // 访问类中的成员
-        System.out.println(student.name); //null
-        System.out.println(student.age); // 0
-        // 给成员变量赋值
-        student.name = "李建军";
-        student.age = 20;
-        student.age = 18;
-        System.out.println("++++++++++++++");
-
-        System.out.println(student.name); //null
-        System.out.println(student.age); // 0
+//        System.out.println(student.name); //null
+//        System.out.println(student.age); // 0
+//        // 给成员变量赋值
+//        student.name = "李建军";
+//        student.age = 20;
+//        student.age = 18;
+//        System.out.println("++++++++++++++");
+//
+//        System.out.println(student.name); //null
+//        System.out.println(student.age); // 0
+        System.out.println(student.getName());
+        student.setName("何子亮");
+        System.out.println(student.getName());
 
         // 调用方法
         student.eat();

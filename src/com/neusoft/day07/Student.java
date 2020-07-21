@@ -7,8 +7,29 @@ package com.neusoft.day07;
 public class Student {
     // 建立了一个 Student类
     // 成员变量  ---》 事物的属性
+
     private String name;
     private  int age;
+    Student(){
+
+    }
+    Student(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+
+    public int  getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+
+
+
+
+
     public String getName(){
         return name;
     }

@@ -6,9 +6,13 @@ package com.neusoft.day07;
  */
 public class TestPhone {
     public static void main(String[] args) {
-        Phone phone = new Phone();
-        phone.brand = "华为";
-        phone.callPhone("码云");
-        phone.sendMessage();
+        Phone phone1 = new Phone();
+        Phone phone2 = new Phone();
+//        phone.brand = "华为";
+        phone1.setBrand("huawei");
+        System.out.println(phone1.getBrand());
+        phone1.callPhone("码云");
+        phone1.sendMessage();
+
     }
 }

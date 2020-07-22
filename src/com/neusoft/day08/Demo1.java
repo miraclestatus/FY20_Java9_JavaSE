@@ -1,5 +1,6 @@
 package com.neusoft.day08;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -25,14 +26,20 @@ public class Demo1 {
 
         //
 //        System.out.println(Arrays.toString(students));
-        for (int i = 0; i < students.length; i++) {
-           Student s =  students[i];
-            System.out.println(s.getName()+"---->"+ s.getAge());
+//        for (int i = 0; i < students.length; i++) {
+//           Student s =  students[i];
+//            System.out.println(s.getName()+"---->"+ s.getAge());
 //        System.out.println(students[i].getName() + students[i].getAge());
 
-        }
+//        }
         // 存储对象，目前只能选择数组
         // 数组长度是固定， 无动态扩容
         // java.util.ArrayList 集合类，更方便
+
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+        System.out.println(list);
     }
 }

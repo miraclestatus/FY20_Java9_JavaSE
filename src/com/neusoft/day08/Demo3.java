@@ -18,10 +18,12 @@ public class Demo3 {
         }
         System.out.println("创建的集合是"+ list);
         ArrayList<Integer> arrayList = getArrayList(list);
-        System.out.println("筛选后的集合是"+ arrayList);
+//         getArrayList(list);
+//        System.out.println("筛选后的集合是"+ arrayList);
 
 
     }
+//    public static void getArrayList(ArrayList<Integer> list){
     public static ArrayList<Integer> getArrayList(ArrayList<Integer> list){
         ArrayList<Integer> oushuList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
@@ -32,7 +34,7 @@ public class Demo3 {
             }
 
         }
-
+//        System.out.println(oushuList);
         return oushuList;
     }
 

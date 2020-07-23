@@ -6,4 +6,5 @@ package com.neusoft.day09;
  */
 public abstract class Animal {
     public abstract void run();
+
 }

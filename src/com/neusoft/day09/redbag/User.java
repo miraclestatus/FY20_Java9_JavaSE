@@ -36,6 +36,6 @@ public class User {
     }
 
     public void show(){
-        System.out.println("用户" + userName + "余额为" + leftMoney + "元" );
+        System.out.println("用户" + userName + "\t"+"余额为" + leftMoney + "元" );
     }
 }

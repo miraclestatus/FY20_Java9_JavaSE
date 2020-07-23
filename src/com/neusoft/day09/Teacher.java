@@ -29,4 +29,14 @@ public class Teacher extends Employee{
     public void work(){
         System.out.println("高效率的卖力干活");
     }
+
+    public void workTest(){
+        // 调用本类的方法
+        this.work();
+        // 调用父类的方法
+        super.work();
+    }
+
+
+
 }

@@ -11,7 +11,9 @@ public class ExtendsTest {
     public static void main(String[] args) {
 //        Teacher t = new Teacher();
 //       new Employee();
-        new Teacher();
+        Teacher t = new Teacher();
+        t.workTest();
+
 
     }
 }

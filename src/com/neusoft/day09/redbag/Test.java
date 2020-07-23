@@ -1,5 +1,6 @@
 package com.neusoft.day09.redbag;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -22,8 +23,11 @@ public class Test {
         System.out.println("请输入发几个包");
         int count = scanner.nextInt();
         // 调用发红包
-        manager.send(money, count);
+        ArrayList<Integer> redList = manager.send(money, count);
         // 调用收红包
+        one.receive(redList);
+        two.receive(redList);
+        three.receive(redList);
 
         manager.show();
         one.show();

@@ -24,6 +24,8 @@ public class Manager extends User {
         if(totalMoney > leftMoney){
             System.out.println("余额不足");
         }
+        // 扣钱
+        super.setLeftMoney(leftMoney-totalMoney);
         // 每个人发的钱
         int avg = totalMoney/count;
         // 除不开余出来的钱

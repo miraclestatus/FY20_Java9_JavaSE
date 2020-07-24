@@ -18,25 +18,25 @@ public class Demo2 {
         for (int i = 0; i < s.length(); i++) {
            char ch =  s.charAt(i);
            // 对每个字符进行判断
-//            if (ch >= 'A'&& ch <='Z'){
-//                bigCount++;
-//            }else if (ch >= 'a'&& ch <='z'){
-//                smallCount++;
-//            }else if(ch >= '0'&& ch <='9'){
-//                numberCount++;
-//            }else {
-//                System.out.println("该字符非法");
-//            }
-
-            if (ch >= 65 && ch <=90){
+            if (ch >= 'A'&& ch <='Z'){
                 bigCount++;
-            }else if (ch >= 97&& ch <=122){
+            }else if (ch >= 'a'&& ch <='z'){
                 smallCount++;
-            }else if(ch >= 48&& ch <=57){
+            }else if(ch >= '0'&& ch <='9'){
                 numberCount++;
             }else {
                 System.out.println("该字符非法");
             }
+//
+//            if (ch >= 65 && ch <=90){
+//                bigCount++;
+//            }else if (ch >= 97&& ch <=122){
+//                smallCount++;
+//            }else if(ch >= 48&& ch <=57){
+//                numberCount++;
+//            }else {
+//                System.out.println("该字符非法");
+//            }
         }
         System.out.println("大写字符数"+ bigCount);
         System.out.println("小写字符数"+ smallCount);

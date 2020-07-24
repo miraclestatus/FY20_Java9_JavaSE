@@ -9,5 +9,18 @@ public interface LiveAble {
     }
     public default void fly(){
         System.out.println("飞飞飞");
+        func1();
+        func2();
     }
+
+    private void func1(){
+        System.out.println("func1");
+    }
+    private void func2(){
+        System.out.println("func2");
+    }
+
+
+
+
 }

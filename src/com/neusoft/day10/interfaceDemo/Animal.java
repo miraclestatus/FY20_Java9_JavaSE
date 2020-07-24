@@ -16,8 +16,8 @@ public class Animal implements LiveAble {
         System.out.println("还睡呀");
     }
 
-    @Override
-    public void fly() {
-        System.out.println("左右飞");
-    }
+//    @Override
+//    public void fly() {
+//        System.out.println("左右飞");
+//    }
 }

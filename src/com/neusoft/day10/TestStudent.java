@@ -14,6 +14,10 @@ public class TestStudent {
         s2.show();
         s3.show();
         s4.show();
+        // 访问类变量
+        System.out.println(Student.numberOfStudent);
+        // 调用静态方法
+        Student.showNum();
 
     }
 }

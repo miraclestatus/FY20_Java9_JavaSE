@@ -8,21 +8,23 @@ public class Demo1 {
     public static void main(String[] args) {
         //  {1, 2, 3} === > [1#2#3]  , [1, 2, 3]
         int[] arr ={1, 2, 3};
-        String s = arrayToString(arr);
+//        String s = arrayToString(arr);
+        Array2String array2String = new Array2String();
+        String s = array2String.arrayToString(arr);
         System.out.println(s);
 
     }
-    public static String arrayToString(int[] arr){
-        String s = new String("[");
-        // 遍历
-        for (int i = 0; i < arr.length; i++) {
-           if(i == arr.length-1){
-               s = s.concat(arr[i] + "]");
-           }else {
-//               s = s.concat(arr[i] + "#");
-               s = s.concat(arr[i] + ",");
-           }
-        }
-        return s;
-    }
+//    public static String arrayToString(int[] arr){
+//        String s = new String("[");
+//        // 遍历
+//        for (int i = 0; i < arr.length; i++) {
+//           if(i == arr.length-1){
+//               s = s.concat(arr[i] + "]");
+//           }else {
+////               s = s.concat(arr[i] + "#");
+//               s = s.concat(arr[i] + ",");
+//           }
+//        }
+//        return s;
+//    }
 }

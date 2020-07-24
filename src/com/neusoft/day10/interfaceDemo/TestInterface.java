@@ -9,5 +9,7 @@ public class TestInterface {
         Animal a = new Animal();
         a.eat();
         a.sleep();
+        a.fly(); // 调用默认方法
+        LiveAble.run();
     }
 }

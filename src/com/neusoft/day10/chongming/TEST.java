@@ -1,6 +1,7 @@
 package com.neusoft.day10.chongming;
 
 import javax.management.MBeanAttributeInfo;
+import java.util.ArrayList;
 
 /**
  * @author Eric Lee

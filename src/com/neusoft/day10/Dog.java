@@ -10,4 +10,7 @@ public class Dog extends Animal {
     public void eat() {
         System.out.println("狗吃骨头");
     }
+    public void watchHouse(){
+        System.out.println("看家");
+    }
 }

@@ -1,6 +1,5 @@
 package com.neusoft.day08;
 
-import jdk.internal.org.objectweb.asm.tree.MultiANewArrayInsnNode;
 
 import java.util.ArrayList;
 import java.util.Random;

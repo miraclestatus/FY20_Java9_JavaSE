@@ -13,4 +13,38 @@ public class Role {
     // 盔甲
     Armour ar;
 
+    public Weapon getWp() {
+        return wp;
+    }
+
+    public void setWp(Weapon wp) {
+        this.wp = wp;
+    }
+
+    public Armour getAr() {
+        return ar;
+    }
+
+    public void setAr(Armour ar) {
+        this.ar = ar;
+    }
+
+
+    // 攻击
+    public void attack(){
+        System.out.println("使用"+ wp.getName() + "， 造成了" + wp.getHurt()+"点伤害");
+
+    }
+
+    // 防御
+    public void  wear(){
+        // 增加防御
+        this.blood += ar.getProtect();
+        System.out.println("穿上了" + ar.getName()+", 生命值增加了" + ar.getProtect());
+
+
+    }
+
+
+
 }

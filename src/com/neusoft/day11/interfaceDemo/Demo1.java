@@ -15,7 +15,6 @@ public class Demo1 {
         }
         List<Integer> doubleNumList = getDoubleNum(list);
         System.out.println(doubleNumList);
-
     }
 
 

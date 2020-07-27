@@ -22,8 +22,11 @@ public class Bootstrap {
 
         //  设置分发策略
         // 普通红包
-        NormalMode normalMode = new NormalMode();
-        myRed.setOpenWay(normalMode);
+//        NormalMode normalMode = new NormalMode();
+//        myRed.setOpenWay(normalMode);
+
+        RandomMode randomMode = new RandomMode();
+        myRed.setOpenWay(randomMode);
 
     }
 }

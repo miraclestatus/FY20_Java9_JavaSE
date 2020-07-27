@@ -6,8 +6,12 @@ package com.neusoft.day12;
  */
 public class TestPerson {
     public static void main(String[] args) {
-        Person p = new Person("张三", 111);
+        Person p1 = new Person("张三", 111);
+        Person p2 = new Person("张三", 111);
+        Person p3 = new Person("李四", 111);
         // com.neusoft.day12.Person@75412c2f
-        System.out.println(p);
+        System.out.println(p1);
+        System.out.println(p1.equals(p2));
+        System.out.println(p1.equals(p3));
     }
 }

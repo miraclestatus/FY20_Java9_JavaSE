@@ -19,7 +19,6 @@ public class TestCalendar {
         // 设置日
         int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH) ;
 
-
         System.out.println(year+"年"+month+"月"+dayOfMonth+"日"); // 2020年7月28日
     }
 }

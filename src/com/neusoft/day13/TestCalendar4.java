@@ -15,7 +15,5 @@ public class TestCalendar4 {
 
         Date date1 = new Date();
         System.out.println(date1); // Tue Jul 28 09:13:15 CST 2020
-
-
     }
 }

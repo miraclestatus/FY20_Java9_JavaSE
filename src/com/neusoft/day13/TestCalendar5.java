@@ -36,8 +36,4 @@ public class TestCalendar5 {
         int lastDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         return lastDay;
     }
-
-
-
-
 }

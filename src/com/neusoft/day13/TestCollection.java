@@ -35,8 +35,5 @@ public class TestCollection {
         //clear() , 清空集合中所有的元素
         coll.clear();
         System.out.println(coll);
-
-
-
     }
 }

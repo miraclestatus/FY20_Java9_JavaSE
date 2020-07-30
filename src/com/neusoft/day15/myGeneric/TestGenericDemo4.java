@@ -13,7 +13,6 @@ public class TestGenericDemo4 {
         Collection<String> list2 = new ArrayList<>();
         Collection<Number> list3 = new ArrayList<>();
         Collection<Object> list4 = new ArrayList<>();
-        String
 //        getElement1(list1);
 //        getElement1(list2);// 报错
 //        getElement1(list3);

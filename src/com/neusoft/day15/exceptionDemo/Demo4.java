@@ -15,6 +15,9 @@ public class Demo4 {
 //            e.printStackTrace();
             System.out.println("++++++++");
             System.out.println(e);
+        }finally {
+            System.out.println("不管try和catch执行啥了，我这里都会执行");
+            System.out.println("我是接盘侠");
         }
         System.out.println("end");
     }

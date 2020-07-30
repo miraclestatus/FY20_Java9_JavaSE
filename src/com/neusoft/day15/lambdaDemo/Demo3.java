@@ -15,18 +15,14 @@ public class Demo3 {
             new Person("妲己", 300),
             new Person("杨玉环", 221),
         };
-        Comparator<Person> comp =  new Comparator<>() {
+        Comparator<Person> comp =  new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
                 return o1.getAge() - o2.getAge();
             }
 
-            @Override
-            public boolean equals(Object obj) {
-                return false;
-            }
         };
-        // 
+        // 第二个参数是排序规则
         Arrays.sort(array, comp);
 
         for(Person person : array){

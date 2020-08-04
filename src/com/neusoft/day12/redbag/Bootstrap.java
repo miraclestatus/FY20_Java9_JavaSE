@@ -24,7 +24,7 @@ public class Bootstrap {
         // 普通红包
 //        NormalMode normalMode = new NormalMode();
 //        myRed.setOpenWay(normalMode);
-
+//
         RandomMode randomMode = new RandomMode();
         myRed.setOpenWay(randomMode);
 

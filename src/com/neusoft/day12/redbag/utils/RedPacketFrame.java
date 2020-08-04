@@ -447,6 +447,7 @@ public abstract class RedPacketFrame extends JFrame {
      * **********************************************************************
      * ======================================================================
      */
+
     /**
      * ownerName 群主名称
      */
@@ -477,4 +478,5 @@ public abstract class RedPacketFrame extends JFrame {
     public void setOpenWay(OpenMode openWay) {
         this.openWay = openWay;
     }
+
 }

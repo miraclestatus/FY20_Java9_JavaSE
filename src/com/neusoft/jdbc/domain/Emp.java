@@ -1,15 +1,12 @@
-package com.neusoft.jdbc.empselectDemo.domain;
+package com.neusoft.jdbc.domain;
 
 import java.util.Date;
 
 /**
  * @author Eric Lee
- * @date 2020/8/5 09:54
+ * @date 2020/8/5 10:47
  */
-// domain 层与数据库中表字段一一对应的数据，就是一个javabean
 public class Emp {
-    // Emp类是与数据库中表字段一一对应的数据，
-    // 成员变量私有
     private Integer id;
     private String ename;
     private String job;
@@ -18,13 +15,9 @@ public class Emp {
     private  Integer salary;
     private Integer bonus;
     private Integer deptno;
-    // 空参构造
 
     public Emp() {
     }
-
-    // get/set
-
 
     public Integer getId() {
         return id;

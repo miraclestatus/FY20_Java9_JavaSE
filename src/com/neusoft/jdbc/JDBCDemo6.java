@@ -6,7 +6,7 @@ import java.sql.*;
  * @author Eric Lee
  * @date 2020/8/5 09:22
  */
-public class JDBCDemo5 {
+public class JDBCDemo6 {
     // 查询
     public static void main(String[] args) {
         Connection conn = null;
@@ -20,20 +20,15 @@ public class JDBCDemo5 {
             stmt = conn.createStatement();
             // 封装查询结果
             rs = stmt.executeQuery(sql);
-            // 类似于迭代器
-            // 让游标移动一下
-            rs.next();
-            int id = rs.getInt(1);
-            String name = rs.getString("name");
-            int balance = rs.getInt(3);
-            System.out.println("id" + id + "name"+name +"balance"+ balance);
 
-            // 让游标移动一下
-            rs.next();
-            int id2 = rs.getInt(1);
-            String name2 = rs.getString("name");
-            int balance2 = rs.getInt(3);
-            System.out.println("id" + id2 + "name"+name2 +"balance"+ balance2);
+
+          while (rs.next()){
+
+              int id = rs.getInt(1);
+              String name = rs.getString("name");
+              int balance = rs.getInt(3);
+              System.out.println("id" + id + "name" + name + "balance" + balance);
+          }
 
 
 

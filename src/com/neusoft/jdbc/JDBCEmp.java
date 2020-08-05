@@ -26,7 +26,7 @@ public class JDBCEmp {
             conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java9", "root", "root");
 
-            String sql = "select * from emp;";
+            String sql = "select * from emp limit 10;";
             stmt = conn.createStatement();
             // 封装查询结果
             rs = stmt.executeQuery(sql);

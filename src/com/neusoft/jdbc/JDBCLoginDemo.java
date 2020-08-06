@@ -2,10 +2,7 @@ package com.neusoft.jdbc;
 
 import com.neusoft.jdbc.utils.JDBCUtils;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Scanner;
 
 /**
@@ -21,7 +18,8 @@ public class JDBCLoginDemo {
         System.out.println("请输入您的密码");
         String password = sc.nextLine();
         // 编写一个方法 login 判断用户用户名和密码是否正确
-        boolean flag = new JDBCLoginDemo().login(userName, password);
+//        boolean flag = new JDBCLoginDemo().login(userName, password);
+        boolean flag = new JDBCLoginDemo().login2(userName, password);
         if (flag){
             System.out.println("登录成功！");
         }else {
@@ -60,4 +58,41 @@ public class JDBCLoginDemo {
         return false;
 
     }
+    public boolean login2(String userName, String password){
+        // 判断是否为空
+        if (userName == null || password ==null){
+            return false;
+        }
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            conn = JDBCUtils.getConnection();
+            // sql
+            String sql = "select * from user where username = ? and password= ?";
+            System.out.println(sql);
+            // 先获执行sql 的对象PreparedStatement
+            pstmt = conn.prepareStatement(sql);
+            // 给? 赋值
+            pstmt.setString(1, userName);
+            pstmt.setString(2, password);
+            // 执行查询 不需要传递sql
+            rs = pstmt.executeQuery();
+//            if (rs.next()){
+//                return true;
+//            }else {
+//                return false;
+//            }
+            return rs.next();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            JDBCUtils.close(pstmt, conn, rs);
+        }
+
+        return false;
+
+    }
+
 }

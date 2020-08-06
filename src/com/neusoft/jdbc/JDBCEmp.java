@@ -140,7 +140,7 @@ public class JDBCEmp {
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
-            JDBCUtils.close(rs, stmt, conn);
+            JDBCUtils.close(stmt, conn, rs);
         }
         return list;
     }

@@ -1,6 +1,7 @@
 package com.neusoft.jdbc;
 
 import com.neusoft.jdbc.domain.Emp;
+import com.neusoft.jdbc.utils.JDBCUtils;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,12 +13,19 @@ import java.util.List;
  */
 public class JDBCEmp {
     public static void main(String[] args) {
-        List<Emp> list = new JDBCEmp().findAll();
-        for (Emp emp: list){
+//        List<Emp> list = new JDBCEmp().findAll();
+//        for (Emp emp : list) {
+//            System.out.println(emp);
+//        }
+        List<Emp> list = new JDBCEmp().findAllUseJDBCUtils();
+
+        for (Emp emp : list) {
             System.out.println(emp);
         }
+
     }
-    public List<Emp> findAll(){
+
+    public List<Emp> findAll() {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -31,7 +39,7 @@ public class JDBCEmp {
             // 封装查询结果
             rs = stmt.executeQuery(sql);
             list = new ArrayList<>();
-            while (rs.next()){
+            while (rs.next()) {
                 int id = rs.getInt("empno");
                 String ename = rs.getString("ename");
                 String job = rs.getString("job");
@@ -87,6 +95,53 @@ public class JDBCEmp {
         }
 
 
-     return  list;
+        return list;
+    }
+
+    /**
+     * 演示JDBCUtils
+     */
+    public List<Emp> findAllUseJDBCUtils() {
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Emp> list = null;
+        try {
+            conn = JDBCUtils.getConnection();
+            // 定义sql
+            String sql = "select * from emp limit 10;";
+            stmt = conn.createStatement();
+            // 封装查询结果
+            rs = stmt.executeQuery(sql);
+            list = new ArrayList<>();
+            while (rs.next()) {
+                int id = rs.getInt("empno");
+                String ename = rs.getString("ename");
+                String job = rs.getString("job");
+                int mgr = rs.getInt("mgr");
+                Date hiredate = rs.getDate("hiredate");
+                int sal = rs.getInt("sal");
+                int comm = rs.getInt("comm");
+                int deptno = rs.getInt("deptno");
+                // 封装 入emp
+                Emp emp = new Emp();
+                emp.setId(id);
+                emp.setEname(ename);
+                emp.setJob(job);
+                emp.setMgr(mgr);
+                emp.setHiredate(hiredate);
+                emp.setSalary(sal);
+                emp.setBonus(comm);
+                emp.setDeptno(deptno);
+                // 添加进集合
+                list.add(emp);
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            JDBCUtils.close(rs, stmt, conn);
+        }
+        return list;
     }
 }

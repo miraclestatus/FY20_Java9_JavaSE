@@ -25,7 +25,7 @@ public class JDBCUtils {
         try {
             // 1、加载配置文件
             Properties pro = new Properties();
-            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.propeties"));
+            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
 
             // 2. 获取 定义成员变量DataSource
             ds = DruidDataSourceFactory.createDataSource(pro);

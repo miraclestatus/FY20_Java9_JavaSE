@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 
 /**
  * @author Eric Lee
@@ -14,6 +15,7 @@ public class JDBCDemo3 {
         Connection conn = null;
         Statement stmt = null;
         try {
+
             conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/java9", "root", "root");
             String sql = "insert  into account values (null , '赵六', 1000)";

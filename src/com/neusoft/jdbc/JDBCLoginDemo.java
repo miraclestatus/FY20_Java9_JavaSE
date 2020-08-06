@@ -40,12 +40,24 @@ public class JDBCLoginDemo {
             conn = JDBCUtils.getConnection();
             // sql
             String sql = "select * from user where username = '"+userName+"' and password= '"+password+"'";
+//            StringBuilder sql2 = new StringBuilder("select * from user where username = '")
+//                    .append(userName).append("' and password= '").append(password).append("'");
+
             System.out.println(sql);
+//            System.out.println(sql2);
+
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+            return rs.next(); // 如果有下一行， 就返回true
+
+
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            JDBCUtils.close(stmt, conn, rs);
         }
 
+        return false;
 
-        return true;
     }
 }

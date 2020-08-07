@@ -35,7 +35,7 @@ public class JDBCDemoShiWu {
             int count = pstmt.executeUpdate();
 
             // 手动制造异常
-            int i = 5/0;
+//            int i = 5/0;
 
             int count2 = pstmt2.executeUpdate();
             System.out.println("count"+ count + "count2"+count2);
@@ -43,7 +43,7 @@ public class JDBCDemoShiWu {
             // 提交事物
             conn.commit();
         } catch (Exception e) {
-             事物进行回滚
+            // 事物进行回滚
             try {
                 if (conn != null){
                     conn.rollback();
